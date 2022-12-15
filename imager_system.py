@@ -4,10 +4,10 @@ import numpy as np
 import tables
 import os
 from datetime import datetime
-from design.apertures import Collimator
-from design.sources import Sources
-from design.detector_system import Detector_System
-from design.utils import generate_detector_centers_and_norms
+from apertures import Collimator
+from sources import Sources
+from detector_system import Detector_System
+from utils import generate_detector_centers_and_norms
 
 
 class Imager(object):
