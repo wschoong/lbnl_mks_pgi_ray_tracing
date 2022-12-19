@@ -266,7 +266,7 @@ def test(separate=True):
     # system.collimator.mu = 1000
 
     # ==================== Run and Display ====================
-    system.sample_step = 0.1  # in cm, default
+    system.sample_step = 0.1  # in mm, default
     system.subsample = 1  # samples per detector pixel.
 
     point_response = system.generate_test_response(em_pt, subsample=system.subsample)
@@ -422,7 +422,7 @@ def main():
     # system.collimator.mu = 1000
 
     # ==================== Run and Display ====================
-    system.sample_step = 0.1  # in cm, default
+    system.sample_step = 0.1  # in mm, default
     system.subsample = 2  # samples per detector pixel. TODO: Check if this is right before running
 
     system.generate_sysmat_response(subsample=system.subsample)

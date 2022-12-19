@@ -2,7 +2,7 @@ import numpy as np
 # from scipy.sparse import lil_matrix
 # from fast_histogram import histogram2d
 
-#  Global origin (0,0,0) should be in the center of the collimator on the detector-collimator axis
+#  Global origin (0,0,0) should be in the center of the imaging/object plane on the detector-collimator axis
 # Beam in x-hat direction, vertical is y-hat. And the detector and collimator are in the -z direction
 
 
