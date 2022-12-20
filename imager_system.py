@@ -246,7 +246,9 @@ def test(separate=True):
     x = np.array([1, 0, 0])
     # y = np.array([0, 1, 0])
     x_displacement = 25.447  # This is the displacement of the center of the detectors from the center of the collimator according to the 3D model
-    distance_mod_plane = np.array([0, 0, -260]) + (x_displacement * x)
+    z_detector_collimator_dist = 130
+    distance_mod_plane = np.array([0, 0, system.collimator.colp[2] - z_detector_collimator_dist]) + (x_displacement * x)
+    print('dist_mod_plane = ', distance_mod_plane) 
 
     mod_centers, directions = generate_detector_centers_and_norms(system.detector_system.layout,
                                                                   det_width=53.2,
@@ -395,7 +397,8 @@ def main():
     x = np.array([1, 0, 0])
     # y = np.array([0, 1, 0])
     x_displacement = 25.447
-    distance_mod_plane = np.array([0, 0, -260]) + (x_displacement * x)
+    z_detector_collimator_dist = 130
+    distance_mod_plane = np.array([0, 0, system.collimator.colp[2] - z_detector_collimator_dist]) + (x_displacement * x)
 
     mod_centers, directions = generate_detector_centers_and_norms(system.detector_system.layout,
                                                                   det_width=53.2,
